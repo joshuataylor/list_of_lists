@@ -4,11 +4,11 @@
 data = [
   Enum.map(0..50000, fn x -> x end),
   Enum.map(0..50000, fn _ -> :crypto.strong_rand_bytes(100) |> Base.url_encode64() end),
-  Enum.map(0..50000, fn _ -> if :rand.uniform(1) == 1, do: true, else: false end),
-  Enum.map(0..50000, fn _ -> if :rand.uniform(1) == 1, do: true, else: false end),
+  Enum.map(0..50000, fn _ -> if :rand.uniform(2) == 1, do: true, else: false end),
+  Enum.map(0..50000, fn _ -> if :rand.uniform(2) == 1, do: true, else: false end),
   Enum.map(0..50000, fn x -> x * :rand.uniform(1000) end),
   Enum.map(0..50000, fn _ -> :crypto.strong_rand_bytes(100) |> Base.url_encode64() end),
-  Enum.map(0..50000, fn _ -> if :rand.uniform(1) == 1, do: true, else: false end),
+  Enum.map(0..50000, fn _ -> if :rand.uniform(2) == 1, do: true, else: false end),
   Enum.map(0..50000, fn x -> x * :rand.uniform(10) end),
   Enum.map(0..50000, fn _ -> :crypto.strong_rand_bytes(100) |> Base.url_encode64() end),
   Enum.map(0..50000, fn _ -> 100 + :rand.uniform() * (100 - 200) end)
